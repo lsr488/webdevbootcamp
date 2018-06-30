@@ -54,7 +54,7 @@ app.get("/repeat/:wordToRepeat/:numToRepeat", function(req, res) {
   var wordString = "";
   function repeater() {
     for(var i = 0; i < num; i++) {
-      wordString = wordString + " " + word;
+      wordString += word + " ";
     }
     return wordString;
   }
@@ -64,7 +64,7 @@ app.get("/repeat/:wordToRepeat/:numToRepeat", function(req, res) {
 
 // Anything else
 app.get("*", function(req, res){
-  res.send("Sorry, page not found");
+  res.send("Sorry, page not found.");
 });
 
 // Tell Express to listen for requests (starT server)
