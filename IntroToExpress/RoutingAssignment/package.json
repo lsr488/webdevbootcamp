@@ -1,12 +1,12 @@
 {
   "name": "routingassignment",
   "version": "1.0.0",
-  "description": "",
+  "description": "Solution to first Express exercise",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "lsr488",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3"
