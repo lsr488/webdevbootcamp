@@ -18,9 +18,14 @@ Each Campground has:
   * add basic unstyled form
   
 #Style the Campgrounds Page
-  * add a better header/title
+  * add a better header/titlemn
   * make campgrounds display in a grid
   
 #Style the Navbar and Form
   * add navbar to templates
   * style the new campground form
+  
+#Add Mongoose
+  * install and configure mongoose
+  * setup campground model
+  * use campground model inside of our routes!
