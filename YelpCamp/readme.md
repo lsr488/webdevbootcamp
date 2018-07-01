@@ -6,10 +6,6 @@
 Each Campground has:
   * name
   * image
-  *
 
-  campgrounds nested array
-  [
-    {name: "Campground 1", image: "img.url"},
-    {name: "Campground 2", image: "img.url"}
-  ]
+Create header & footer partials
+Add in Bootstrap
