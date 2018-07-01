@@ -7,5 +7,12 @@ Each Campground has:
   * name
   * image
 
-Create header & footer partials
-Add in Bootstrap
+#Setup Basic Page Format
+  * Create header & footer partials
+  * Add in Bootstrap
+
+#Creating New Campgrounds
+  * setup new campground POST route
+  * add in body-parsesr
+  * setup route to show form
+  * add basic unstyled form
