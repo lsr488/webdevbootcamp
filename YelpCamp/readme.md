@@ -29,3 +29,9 @@ Each Campground has:
   * install and configure mongoose
   * setup campground model
   * use campground model inside of our routes!
+   
+#Show Page
+  * change campground schema to add description to campground model
+  * new mongo command: db.collection.drop()
+    * deletes all info currently in db 
+  * add a show/route template
