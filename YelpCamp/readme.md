@@ -17,6 +17,10 @@ Each Campground has:
   * setup route to show form
   * add basic unstyled form
   
-#Styling the Campgrounds Page
+#Style the Campgrounds Page
   * add a better header/title
   * make campgrounds display in a grid
+  
+#Style the Navbar and Form
+  * add navbar to templates
+  * style the new campground form
