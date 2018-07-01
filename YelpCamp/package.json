@@ -1,0 +1,15 @@
+{
+  "name": "yelp_camp",
+  "version": "1.0.0",
+  "description": "* add Landing Page * add Campground Page that lists all campgrounds",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lsr488",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
