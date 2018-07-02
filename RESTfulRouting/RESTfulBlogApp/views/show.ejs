@@ -4,13 +4,15 @@
   <div class="ui huge header"><%= blog.title %></div>
     <div class="ui top attached">
       <div class="item">
-        <img  class="centered rounded image ui" src="<%= blog.image %>">
-      </div>
-      <div class="content">
-        <span><%= blog.created.toDateString() %></span>
-      </div>
-      <div class="description">
-        <p><%- blog.body %></p>
+        <div class="image">
+          <img  class="centered rounded image ui" src="<%= blog.image %>">
+        </div>
+        <div class="meta">
+          <span><%= blog.created.toDateString() %></span>
+        </div>
+        <div class="description">
+          <p><%- blog.body %></p>
+        </div>
       </div>
       <a href="/blogs/<%= blog._id %>/edit">
         <button class="ui green basic button"><i class="edit icon"></i>Edit</button>
@@ -19,6 +21,7 @@
         <button class="ui red basic button"><i class="delete icon"></i>Delete</button>
       </form>
     </div>
+  </div>
 </div>
 
 <% include partials/footer.ejs %>
