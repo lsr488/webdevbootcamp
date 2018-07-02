@@ -1,7 +1,8 @@
 var express = require("express"),
     app = express(),
     bodyParser = require("body-parser"),
-    mongoose = require("mongoose");
+    mongoose = require("mongoose"),
+    methodOverride = require("method-override");
     
 // app config    
 mongoose.connect("mongodb://localhost/restful_blog_app");
@@ -9,6 +10,7 @@ mongoose.connect("mongodb://localhost/restful_blog_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
 
 // mongoose/model config
 var blogSchema = new mongoose.Schema({
@@ -66,8 +68,27 @@ app.get("/blogs/:id", function(req, res) {
 });
 
 // EDIT ROUTE
+// need to FIND correct blog
+app.get("/blogs/:id/edit", function(req, res) {
+   Blog.findById(req.params.id, function(error, foundBlog) {
+     if(error) {
+       res.redirect("/blogs");
+     } else {
+        res.render("edit", {blog: foundBlog}); 
+     }
+   });
+});
 
 // UPDATE ROUTE
+app.put("/blogs/:id", function(req, res) {
+  Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(error, updatedBlog) {
+    if(error) {
+      res.redirect("/blogs");
+    } else {
+      res.redirect("/blogs/" + req.params.id);
+    }
+  });
+});
 
 // DESTROY ROUTE
 
