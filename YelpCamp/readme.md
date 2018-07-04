@@ -35,3 +35,8 @@ Each Campground has:
   * new mongo command: db.collection.drop()
     * deletes all info currently in db 
   * add a show/route template
+
+#Refactor Mongoose Code
+  * create a models directory
+  * use module.export
+  * require everything correctly
