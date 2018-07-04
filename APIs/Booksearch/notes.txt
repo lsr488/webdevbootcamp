@@ -1,0 +1,72 @@
+General Work Title/Author Search:
+
+To access the specific title information, you're looking at an array inside an object
+
+data {
+  works {
+    work [
+      {
+        author/title data!
+      }
+    ]
+  }
+}
+
+app.get("/results", function(req, res) {
+  var query = "kimmel kathleen";
+  // var query = req.query.search;
+  var url = "https://reststop.randomhouse.com/resources/works?max=1&search=" + query;
+  request(url, function (error, response, body) {
+    xml2js(body, function(error, data) {
+      var newData = JSON.stringify(data);
+      var jsData = JSON.parse(newData)
+      console.log("WORKS:", jsData["works"]);
+      console.log("second level:", jsData["works"]["$"]);
+      console.log("third level:", jsData["works"]["$"]["uri"]);
+      console.log("WORKS WORK:", jsData["works"]["work"]);
+      console.log("WORKS WORK ARRAY:", jsData["works"]["work"][0]);
+      console.log("WORKS WORK ARRAY ARRAY:", jsData["works"]["work"][0]["authorweb"]);
+      console.log("WORKS WORK ARRAY:", jsData["works"]["work"][0]["titles"][0]["isbn"][1]);
+      newData.forEach(function(obj) {
+       console.log("obj :", obj)
+      });
+      
+      res.render("results", {data: data});
+    });
+  });
+});
+
+
+      // console.log("NEWDATA:", jsData);
+      // console.log("TITLES:", jsData["titles"]);
+      // console.log("TITLES TITLE:", jsData["titles"]["title"]);
+      // console.log("TITLES TITLE AUTHORWEB:", jsData["titles"]["title"][0]["authorweb"][0]);
+      // console.log("TITLES TITLE TITLEWEB:", jsData["titles"]["title"][0]["titleweb"][0]);
+      // console.log("TITLES TITLE ISBN:", jsData["titles"]["title"][0]["isbn"][0]);
+      // console.log("INDIV RECORD 0:", jsData["works"]["work"][0]);
+      // console.log("INDIV RECORD 1:", jsData["works"]["work"][1]);
+      // console.log("INDIV RECORD 2:", jsData["works"]["work"][2]);
+      // console.log("AUTHOR NAME:", jsData["works"]["work"][0]["authorweb"][0]);
+      // console.log("TITLE NAME:", jsData["works"]["work"][0]["titleweb"][0]);
+      // console.log("WORKS WORK ARRAY ARRAY:", jsData["works"]["work"][0]["authorweb"]);
+      // console.log("TITLE ISBN:", jsData["works"]["work"][0]["titles"][0]["isbn"][0]["_"]);
+      
+
+
+    <img src='https://reststop.randomhouse.com/resources/titles/<%= book["titles"][0]["isbn"][0]["_"] %>'>
+
+WORKS -- shows unique title sets
+https://reststop.randomhouse.com/resources/works?&search=kathleen+kimmel
+
+TITLES -- has A LOT of useful information (but not series, lol), shows per ISBN (duplicate books)
+https://reststop.randomhouse.com/resources/titles?&search=kathleen+kimmel
+
+
+
+
+
+
+
+
+
+name='<%= book["titles"][0]["isbn"][0]["_"] %>>'

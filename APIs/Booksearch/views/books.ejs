@@ -1,0 +1,36 @@
+<% include partials/header.ejs %>
+
+<div class="ui container">
+  <div class="ui huge message page">
+    <h1 class="ui header huge">Results Page</h1>
+    <p>Your results! Feel free to perform another search for your favorite Penguin Random House books.</p>
+    <a class="ui button purple"  tabindex="0" href="/">Search Again ></a>
+  </div>
+</div>
+
+<% jsData.titles.title.forEach(function(book) { %>
+<div class="ui container">
+  <div class="ui container segment grid">
+
+  <div class="row">
+    <div class="four wide column">
+      <img src='https://reststop.randomhouse.com/resources/titles/<%= book["isbn"] %>'>
+    </div>
+    
+    
+    <div class="four wide column">
+      <h2><span class="title"><%= book["titleweb"] %></span></h2> 
+      <p>by <span class="author" id="title-case"><%= book["authorweb"] %></span></p>
+      <p>Format: <%= book["formatname"] %></p>
+      <p><span class="series"><%= book["series"] %></span></p>
+    </div>
+    
+    <div class="eight wide column">
+      <p><%- book["flapcopy"] %></p>
+    </div>
+    
+    </div>
+    
+  </div>
+</div>
+<% }); %>

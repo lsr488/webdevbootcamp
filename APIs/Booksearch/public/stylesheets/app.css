@@ -1,0 +1,16 @@
+body {
+  background: PAPAYAWHIP;
+}
+
+.title {
+  font-style: italic;
+  /*font-weight: bold;*/
+}
+
+.series {
+  /*font-size: .8em;*/
+}
+
+.author {
+  font-size: 1.2em;
+}

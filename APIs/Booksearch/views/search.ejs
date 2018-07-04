@@ -1,0 +1,19 @@
+<% include partials/header.ejs %>
+
+<div class="ui container">
+  <div class="ui huge message page">
+    <h1>The Penguin Random House Book Search Portal</h1>
+  </div>
+
+  <div class="ui header">
+    <h2>Search for a PRH Book by entering the author's name or book title.</h2>
+  </div>
+
+  <div class="ui form">
+    <form action="/results" method="GET">
+      <input type="text" placeholder="author or title" name="search">
+      <input type="submit" class="ui button orange fluid" tabindex="0">
+    </form>
+  </div>
+
+</div>
