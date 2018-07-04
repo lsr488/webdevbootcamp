@@ -44,3 +44,8 @@ Each Campground has:
 #Add the Comment Model
   * make errors go away (lol)
   * display comments on the campground show page
+  
+#Enable new comment creation
+  * discuss nested routes
+  * add the comment new and create routes
+  * add the new comment form
