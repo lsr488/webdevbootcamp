@@ -40,3 +40,7 @@ Each Campground has:
   * create a models directory
   * use module.export
   * require everything correctly
+
+#Add the Comment Model
+  * make errors go away (lol)
+  * display comments on the campground show page
