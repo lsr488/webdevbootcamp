@@ -50,6 +50,11 @@ Each Campground has:
   * add the comment new and create routes
   * add the new comment form
   * 
-#Add User Model
+##Author Part 1 - Add User Model
   * install all packages for authentication
   * define User model
+  
+##Auth Part 2 - Register
+  * configure passport
+  * add register routes
+  * add register template

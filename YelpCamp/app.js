@@ -19,6 +19,18 @@ app.use(express.static(__dirname + "/public"));
 // seed DB with initial data
 // seedDB();
 
+// PASSPORT CONFIGURATION
+app.use(require("express-session")({
+  secret: "Once again, Rusty wins cutest dog!",
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 // get landing page
 app.get("/", function(req, res) {
   res.render("landing");
