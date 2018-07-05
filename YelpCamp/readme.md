@@ -49,3 +49,7 @@ Each Campground has:
   * discuss nested routes
   * add the comment new and create routes
   * add the new comment form
+  * 
+#Add User Model
+  * install all packages for authentication
+  * define User model
