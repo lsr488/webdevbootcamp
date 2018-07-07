@@ -54,6 +54,31 @@ router.get("/:id", function(req, res) {
   // render show template with that campground
 });
 
+// EDIT campground route
+router.get("/:id/edit", function(req, res) {
+  Campground.findById(req.params.id, function(err, foundCampground) {
+    if (err) {
+      res.redirect("/campgrounds");
+    } else {
+      res.render("campgrounds/edit", {campground: foundCampground});
+    }
+  });
+});
+
+router.put("/:id", function(req, res) {
+  //find and update campground entry
+  Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground) {
+    if(err) {
+      res.redirect("/campground");
+    } else {
+      res.redirect("/campgrounds/" + req.params.id);
+    }
+  });
+  //redirect to show page
+});
+
+// UPDATE campground route
+
 // middleware
 function isLoggedIn(req, res, next) {
   if(req.isAuthenticated()) {

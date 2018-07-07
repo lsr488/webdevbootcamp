@@ -2,6 +2,7 @@ var express     = require("express"),
     app         = express(),
     bodyParser  = require("body-parser"),
     mongoose    = require("mongoose"),
+    methodOverride = require("method-override"),
     Campground  = require("./models/campground"),
     seedDB      = require("./seeds"),
     passport    = require("passport"),
@@ -19,6 +20,7 @@ mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(methodOverride("_method"));
 
 // seed DB with initial data
 // seedDB();

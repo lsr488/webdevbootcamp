@@ -81,3 +81,10 @@ Each Campground has:
 ##Users + Campgrounds
   * prevent unauthenticated user from creating a campground
   * save username+id to newly created campground
+  
+##Editing Campgrounds
+  * add method-override
+  * add edit route for campgrounds
+  * add link to edit page
+  * add update route
+  * fix $set problem
