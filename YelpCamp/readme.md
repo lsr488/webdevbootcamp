@@ -82,13 +82,19 @@ Each Campground has:
   * prevent unauthenticated user from creating a campground
   * save username+id to newly created campground
   
-##Editing Campgrounds
+#Editing Campgrounds
   * add method-override
   * add edit route for campgrounds
   * add link to edit page
   * add update route
   * fix $set problem
   
-##Destroy Campgrounds
+#Destroy Campgrounds
   * add destroy routes
   * add delete button
+  * 
+#Authorization  
+  * user can only edit their campgrounds
+  * user can only delete their campgrounds
+  * hide/show edit and delete buttons
+  * (authorization is permission, authentication is proving who you are)
