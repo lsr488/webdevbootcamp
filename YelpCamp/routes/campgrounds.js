@@ -8,9 +8,9 @@ router.get("/", function(req, res) {
   // get all campgrounds from db
   Campground.find({}, function(error, allCampgrounds) {
     if(error) {
-      console.log(error);
+      console.log("Campground index get route error:", error);
     } else {
-      res.render("campgrounds/index", {campgrounds: allCampgrounds, currentUser: req.user});
+      res.render("campgrounds/index", {campgrounds: allCampgrounds});
     }
   });
 });
@@ -25,9 +25,9 @@ router.post("/", function(req, res) {
   // add new campground to campgrounds db
   Campground.create(newCampground, function(error, newlyCreated) {
     if(error) {
-      console.log(error);
+      console.log("Campground create post error:", error);
     } else {
-      res.redirect("/campgrounds/index");
+      res.redirect("/campgrounds");
     }
   });
 });
