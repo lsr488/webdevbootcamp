@@ -58,7 +58,13 @@ Each Campground has:
   * configure passport
   * add register routes
   * add register template
-  * 
+  
 ##Auth part 3 - Login
   * add login routes
   * add login tempalte
+  
+##Auth Part 4 - Logout/Navbar 
+ * add logout route
+ * prevent user from adding a comment if not signed in
+ * add links to navbar
+ * show/hide auth links correctly
