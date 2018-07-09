@@ -21,13 +21,14 @@ router.get("/", function(req, res) {
 router.post("/", middleware.isLoggedIn, function(req, res) {
   // get data from form
   var name = req.body.name;
+  var price = req.body.price;
   var image = req.body.image;
   var desc = req.body.description;
   var author = {
     id: req.user._id,
     username: req.user.username
   }
-  var newCampground = {name: name, image: image, description: desc, author: author};
+  var newCampground = {name: name, price: price, image: image, description: desc, author: author};
   // add new campground to campgrounds db
   Campground.create(newCampground, function(error, newlyCreated) {
     if(error) {
@@ -59,6 +60,7 @@ router.get("/:id", function(req, res) {
 
 // EDIT campground route
 router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res) {
+
   Campground.findById(req.params.id, function(err, foundCampground) {
     if(err) {
       req.flash("error", err.message);

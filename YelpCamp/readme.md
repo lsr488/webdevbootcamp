@@ -120,3 +120,6 @@ Each Campground has:
   
 #Landing Page
   * background slider that fades between images
+  
+#Prices
+  * add dynamic price feature
