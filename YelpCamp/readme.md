@@ -103,3 +103,8 @@ Each Campground has:
   * add edit route for comments
   * add edit button
   * add update route
+  
+#Deleting Comments
+  * add destroy route
+  * add destroy button
+  

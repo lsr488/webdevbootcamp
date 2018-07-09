@@ -6,7 +6,7 @@ var Comment = require("../models/comment");
 // new comment
 router.get("/new", isLoggedIn, function(req, res) {
   // find campground by id
-  console.log(req.params.id);
+  // console.log(req.params.id);
   Campground.findById(req.params.id, function(error, campground) {
     if(error) {
       console.log(error);
@@ -67,6 +67,18 @@ router.put("/:comment_id", function(req, res) {
         res.redirect("/campgrounds/" + req.params.id);
       }
   });
+});
+
+// DESTROY comment
+router.delete("/:comment_id", function(req, res) {
+  Comment.findByIdAndRemove(req.params.comment_id, function(err) {
+    if(err) {
+      res.redirect("back");
+    } else {
+      res.redirect("/campgrounds/" + req.params.id);
+    }
+  });
+  
 });
 
 // middleware
