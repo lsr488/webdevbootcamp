@@ -98,3 +98,8 @@ Each Campground has:
   * user can only delete their campgrounds
   * hide/show edit and delete buttons
   * (authorization is permission, authentication is proving who you are)
+   
+#Editing Comments
+  * add edit route for comments
+  * add edit button
+  * add update route
