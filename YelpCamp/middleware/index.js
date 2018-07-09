@@ -46,6 +46,8 @@ middlewareObj.isLoggedIn = function(req, res, next) {
   if(req.isAuthenticated()) {
     return next();
   }
+  // gives us capability to display msg, but doesn't ACTUALLY display (that's in the header)
+  req.flash("error", "Please login first.");
   res.redirect("/login");
 }
 

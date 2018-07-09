@@ -113,3 +113,7 @@ Each Campground has:
   * user can only delete own comments
   * hide/show edit and delete buttons
   * refactor middleware
+  
+#Adding in Flash
+  * install and configure package connect-flash
+  * add bootstrap alerts to header
