@@ -108,3 +108,8 @@ Each Campground has:
   * add destroy route
   * add destroy button
   
+#Auth Part 2: Comments
+  * user can only edit own comments
+  * user can only delete own comments
+  * hide/show edit and delete buttons
+  * refactor middleware
