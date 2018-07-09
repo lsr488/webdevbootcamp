@@ -117,3 +117,6 @@ Each Campground has:
 #Adding in Flash
   * install and configure package connect-flash
   * add bootstrap alerts to header
+  
+#Landing Page
+  * background slider that fades between images
