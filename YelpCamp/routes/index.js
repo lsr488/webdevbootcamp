@@ -9,9 +9,9 @@ router.get("/", function(req, res) {
 });
 
 
-// registration page
+// registration SHOW page
 router.get("/register", function(req, res) {
-  res.render("register");
+  res.render("register", {page: "register"});
 });
 
 // handle signup logic
@@ -31,7 +31,7 @@ router.post("/register", function(req, res) {
 
 // show LOGIN form
 router.get("/login", function(req, res) {
-  res.render("login");
+  res.render("login", {page: "login"});
 });
 
 // handle login logic

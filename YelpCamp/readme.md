@@ -123,3 +123,12 @@ Each Campground has:
   
 #Prices
   * add dynamic price feature
+
+#Further UI Improvements
+  * style login & sign-up views (done)
+  * update navbar menu
+    * convert .container-fluid to .container
+    * add contional active class to menu list items
+    * add collapsible hamburger menu
+    * make responsive for mobile
+  * fix registration flash message bug

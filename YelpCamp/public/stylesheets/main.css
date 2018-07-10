@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.form-inputs {
+  width: 40%; 
+  margin: 25px auto;
+}
+
 .thumbnail img {
   width: 100%;
 }
