@@ -133,6 +133,7 @@ Each Campground has:
     * make responsive for mobile
   * fix registration flash message bug
   * display time since post was created with MomentJS
+  * admin/user roles
 
 
 #UI Improvements TK
