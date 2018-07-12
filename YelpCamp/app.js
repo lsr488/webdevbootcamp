@@ -2,6 +2,7 @@ var express     = require("express"),
     app         = express(),
     bodyParser  = require("body-parser"),
     mongoose    = require("mongoose"),
+    moment      = require("moment"),
     flash       = require("connect-flash"),
     methodOverride = require("method-override"),
     Campground  = require("./models/campground"),
@@ -23,6 +24,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
+app.locals.moment = moment;
 
 // seed DB with initial data
 // seedDB();

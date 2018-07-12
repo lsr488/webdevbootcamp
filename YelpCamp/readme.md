@@ -132,3 +132,16 @@ Each Campground has:
     * add collapsible hamburger menu
     * make responsive for mobile
   * fix registration flash message bug
+  * display time since post was created with MomentJS
+
+
+#UI Improvements TK
+  * fuzzy search
+  * campground "location" in Google Maps
+  * CSS3 background animation on landing page
+  * footer
+  * home link in navigation
+  * authentication flash messages
+  * user profile
+  * password reset
+  * image upload with multer and cloudinary
