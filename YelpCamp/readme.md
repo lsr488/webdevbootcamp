@@ -133,7 +133,8 @@ Each Campground has:
     * make responsive for mobile
   * fix registration flash message bug
   * display time since post was created with MomentJS
-  * admin/user roles
+  * admin roles
+  * user profile
 
 
 #UI Improvements TK
@@ -143,6 +144,5 @@ Each Campground has:
   * footer
   * home link in navigation
   * authentication flash messages
-  * user profile
   * password reset
   * image upload with multer and cloudinary
